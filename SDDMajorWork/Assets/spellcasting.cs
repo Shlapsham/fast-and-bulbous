@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class NewBehaviourScript : MonoBehaviour
+public class spellcasting : MonoBehaviour
 {
     [SerializeField]
     bool[] selectedKeys = { false, false, false, false, false, false, false, false, false, false, false };
     bool[] testSpell = { true, true, true, true, true, true, true, true, true, true, true };
+    [SerializeField]
     bool flag1 = false;
+    [SerializeField]
+    bool flag2 = false;
     void Start()
     {
         
@@ -18,7 +21,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void checkKeyPress()
     {
-        if (UnityEngine.Input.GetKey("A"))
+        if (UnityEngine.Input.GetButtonDown("A"))
         {
             if (selectedKeys[0])
             {
@@ -29,7 +32,7 @@ public class NewBehaviourScript : MonoBehaviour
                 selectedKeys[0] = true;
             }
         }
-        if (UnityEngine.Input.GetKey("B"))
+        if (UnityEngine.Input.GetButtonDown("B"))
         {
             if (selectedKeys[1])
             {
@@ -40,7 +43,7 @@ public class NewBehaviourScript : MonoBehaviour
                 selectedKeys[1] = true;
             }
         }
-        if (UnityEngine.Input.GetKey("X"))
+        if (UnityEngine.Input.GetButtonDown("X"))
         {
             if (selectedKeys[2])
             {
@@ -51,7 +54,7 @@ public class NewBehaviourScript : MonoBehaviour
                 selectedKeys[2] = true;
             }
         }
-        if (UnityEngine.Input.GetKey("Y"))
+        if (UnityEngine.Input.GetButtonDown("Y"))
         {
             if (selectedKeys[3])
             {
@@ -62,7 +65,7 @@ public class NewBehaviourScript : MonoBehaviour
                 selectedKeys[3] = true;
             }
         }
-        if (UnityEngine.Input.GetKey("LeftBumper"))
+        if (UnityEngine.Input.GetButtonDown("LeftBumper"))
         {
             if (selectedKeys[4])
             {
@@ -73,7 +76,7 @@ public class NewBehaviourScript : MonoBehaviour
                 selectedKeys[4] = true;
             }
         }
-        if (UnityEngine.Input.GetKey("RightBumper"))
+        if (UnityEngine.Input.GetButtonDown("RightBumper"))
         {
             if (selectedKeys[5])
             {
